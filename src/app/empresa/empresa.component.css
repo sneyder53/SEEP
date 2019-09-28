@@ -1,0 +1,23 @@
+.empresa {
+	display: inline-block;
+	float: left;
+	width: 40%;
+	height: 40%;
+}
+
+.empresa img {
+	height: 100%;
+	width: 100%;
+}
+
+.empresa2 {
+	display: inline-block;
+	float: right;
+	width: 50%;
+	height: 50%;
+}
+
+.empresa2 img {
+	height: 100%;
+	width: 100%;
+}

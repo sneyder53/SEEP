@@ -1,0 +1,10 @@
+.empresa {
+	display: block;
+	width: 30%;
+	height: 30%;
+}
+
+.empresa img {
+	height: 100%;
+	width: 100%;
+}
