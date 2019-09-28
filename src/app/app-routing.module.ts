@@ -8,6 +8,8 @@ import { SeacontComponent } from './seacont/seacont.component';
 import { MotoDetalleComponent } from './moto-detalle/moto-detalle.component';
 import { SeacontDetalleComponent } from './seacont-detalle/seacont-detalle.component';
 import { ArchivoComponent } from './archivo/archivo.component';
+import { PreguntaEmpresaComponent } from './pregunta-empresa/pregunta-empresa.component';
+
 
 
 
@@ -20,6 +22,7 @@ const routes: Routes = [
 	{path: 'motodetalle', component: MotoDetalleComponent },
 	{path: 'seacontdetalle', component: SeacontDetalleComponent },
 	{path: 'archivo/:id', component: ArchivoComponent },
+	{path: 'preguntaempresa/:id', component: PreguntaEmpresaComponent },
 ];
 
 @NgModule({
