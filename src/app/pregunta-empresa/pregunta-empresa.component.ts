@@ -9,6 +9,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class PreguntaEmpresaComponent implements OnInit {
 
 	public empresa = null;
+	public pregunta = 0;
 
   constructor(private _route: ActivatedRoute) { }
 
@@ -21,6 +22,10 @@ export class PreguntaEmpresaComponent implements OnInit {
         params =>{
         	this.empresa =  params["id"];
         });
+  }
+
+  siguientePregunta(){
+  	this.pregunta ++
   }
 
 }

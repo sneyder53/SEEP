@@ -2,5 +2,55 @@
 	<h2>Empresa SEACONT</h2>
 </div>
 <div class="container" *ngIf="empresa == 2">
-	<h2>Empresa MOTO</h2>
+	<div class="row justify-content-md-center">
+  		<div class="col-lg-4 float-lg-left">
+	    	<a href="" class="logoempresa btn" [routerLink]="['/moto']"><img src="assets/imagenes/motos.png"></a>
+	    </div>
+	    <div class="col col-lg-4">
+	    	
+	    </div>
+	    
+	    <div class="col-lg-4 float-lg-right">
+	    	<a href="" class="logodocumento btn" [routerLink]="['/archivo', 2]"><img src="assets/imagenes/archivos.png"></a>
+	    </div>
+	</div>
+	<div class="row justify-content-md-center">
+		<div class="col-lg-6 float-left">
+	      <img src="assets/imagenes/boss.png">
+	    </div>
+	    <div class="col col-lg-6" *ngIf="pregunta == 0" >
+	    	<div class="text-center empresa">
+				
+			</div>
+	      	<div class="card">
+	        	<div class="card-body">
+		            Te  voy  a  realizar  una  serie  de  preguntas acerca  de  nuesta  empresa  para  saber  si tienes  claro  algunos  aspectos  acerca  de ella.
+		        </div>
+	        <button class="btn btn-info" (click)="siguientePregunta()">Siguiente</button>
+	      </div>
+	    </div>
+	    <div class="col col-lg-6" *ngIf="pregunta == 1" >
+	    	<div class="text-center empresa">
+				
+			</div>
+	      	<div class="card">
+	        	<div class="card-body">
+		    		<form>
+		    			<div class="form-group">
+		    				<label>A que sector de la economía pertenece la empresa? </label>
+		    				<select multiple class="form-control" id="exampleFormControlSelect2">
+		    					<option>A. Servicios</option>
+		    					<option>B. Comercio</option>
+		    					<option>C. A y B</option>
+		    					<option>D. Ninguna de las Anteriores</option>
+		    				</select>
+		    			</div>
+		    			
+
+		    		</form>
+		        </div>
+	        <button class="btn btn-info" (click)="siguientePregunta()">Siguiente</button>
+	      </div>
+	    </div>
+	</div>
 </div>
