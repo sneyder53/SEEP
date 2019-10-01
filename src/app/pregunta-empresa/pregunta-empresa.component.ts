@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Pregunta } from '../model/pregunta';
+//import {FormControl, FormGroup, FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-pregunta-empresa',
@@ -9,11 +11,24 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class PreguntaEmpresaComponent implements OnInit {
 
 	public empresa = null;
-	public pregunta = 0;
+	public preguntanex = 0;
+	//public respuesta : string;
 
-  constructor(private _route: ActivatedRoute) { }
+	respuestas = [
+    {valor:'A', muestraValor:'Sumar'},
+    {valor:'B', muestraValor:'Restar'},
+    {valor:'C', muestraValor:'Multiplicar'},
+    {valor:'D', muestraValor:'Dividir'}
+  ];
+
+  constructor(
+  				private _route: ActivatedRoute)
+  			{ 
+  				
+  			}
 
   ngOnInit() {
+  	//this.pregunta = new Pregunta(1,'A que sector de la economía pertenece la empresa?',['A','B','C','D']);
   	this.setEmpresa()
   }
 
@@ -25,7 +40,8 @@ export class PreguntaEmpresaComponent implements OnInit {
   }
 
   siguientePregunta(){
-  	this.pregunta ++
+  	this.preguntanex ++
+  	//this.respuestas = value;
   }
 
 }
