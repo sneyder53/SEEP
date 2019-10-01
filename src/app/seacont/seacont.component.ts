@@ -8,7 +8,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./seacont.component.css']
 })
 export class SeacontComponent implements OnInit {
-
+	nombre = 'JUAN';
   constructor() { }
 
   ngOnInit() {

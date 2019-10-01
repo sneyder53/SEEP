@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { MotoDetalleComponent } from './moto-detalle/moto-detalle.component';
 import { SeacontDetalleComponent } from './seacont-detalle/seacont-detalle.component';
 import { ArchivoComponent } from './archivo/archivo.component';
 import { PreguntaEmpresaComponent } from './pregunta-empresa/pregunta-empresa.component';
+import { ModuloComponent } from './modulo/modulo.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { PreguntaEmpresaComponent } from './pregunta-empresa/pregunta-empresa.co
     MotoDetalleComponent,
     SeacontDetalleComponent,
     ArchivoComponent,
-    PreguntaEmpresaComponent
+    PreguntaEmpresaComponent,
+    ModuloComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

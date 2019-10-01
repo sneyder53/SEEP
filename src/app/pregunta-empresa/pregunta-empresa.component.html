@@ -9,16 +9,12 @@
 	    <div class="col col-lg-4">
 	    	
 	    </div>
-	    
-	    <div class="col-lg-4 float-lg-right">
-	    	<a href="" class="logodocumento btn" [routerLink]="['/archivo', 2]"><img src="assets/imagenes/archivos.png"></a>
-	    </div>
 	</div>
 	<div class="row justify-content-md-center">
 		<div class="col-lg-6 float-left">
 	      <img src="assets/imagenes/boss.png">
 	    </div>
-	    <div class="col col-lg-6" *ngIf="preguntanex == 0" >
+	    <div class="col col-lg-6" *ngIf="preguntanex == 0">
 	    	<div class="text-center empresa">
 				
 			</div>
@@ -29,36 +25,33 @@
 	        <button class="btn btn-info" (click)="siguientePregunta()">Siguiente</button>
 	      </div>
 	    </div>
-	    <div class="col col-lg-6" *ngIf="preguntanex == 1" >
+	    <div class="col col-lg-6" *ngIf="preguntanex == 1">
 	    	<div class="text-center empresa">
-				
 			</div>
 	      	<div class="card">
 	        	<div class="card-body">
-		    		<form >
+		    		<form>
 		    			<div class="form-group">
 		    				<label> A que sector de la economía pertenece la empresa?</label>
-		    				<select class="form-control" name="respuesta" id="respuesta">
-		    					<option value="A">A. Servicios</option>
-		    					<option value="B">B. Comercio</option>
-		    					<option value="C">C. A y B</option>
-		    					<option value="D">D. Ninguna de las Anteriores</option>
+		    				<select class="form-control" >
+		    					<option *ngFor="let respuesta of respuestas" value="{{respuesta.valor}}">{{ respuesta.muestraValor }}</option>
 		    				</select>
 		    			</div>
+		    			
 		    		</form>
+		    		<button class="btn btn-info" (click)="siguientePregunta()">Siguiente</button>
 		        </div>
-	        <button class="btn btn-info" (click)="siguientePregunta()">Siguiente</button>
 	      </div>
 	    </div>
-	    <div class="col col-lg-6" *ngIf="pregunta == 2" >
+	    <div class="col col-lg-6" *ngIf="preguntanex == 2">
 	    	<div class="text-center empresa">
 				
 			</div>
 	      	<div class="card">
 	        	<div class="card-body">
-		    		su respuesta es {{ respuesta }}
+		    		su respuesta es  correcta es {{ respuestaCorrecta }}
 		        </div>
-	        <button class="btn btn-info" (click)="siguientePregunta()">Siguiente</button>
+	        <a href="#" class="btn btn-info"  [routerLink]="['/modulo',2]">Siguiente</a>
 	      </div>
 	    </div>
 	</div>
